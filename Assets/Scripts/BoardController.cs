@@ -165,38 +165,38 @@ public class BoardController : MonoBehaviour
         {
             target.position = new Vector3(initPosX + x * 1.5f, 0.45f, initPosZ);
             piece = Instantiate(bluePiece, target.position, target.rotation);
-            piece.name = "Piece" + x;
+            piece.name = "BluePiece";
             pieces.Add(piece);
         }
-        for (int x = 20; x < 40; x++)
+        for (int x = 0; x < 20; x++)
         {
             target.position = new Vector3(initPosX + x * 1.5f, 0.45f, initPosZ + 1.5f);
             piece = Instantiate(greenPiece, target.position, target.rotation);
-            piece.name = "Piece" + x;
+            piece.name = "GreenPiece";
             pieces.Add(piece);
         }
-        for (int x = 40; x < 60; x++)
+        for (int x = 0; x < 20; x++)
         {
             target.position = new Vector3(initPosX + x * 1.5f, 0.45f, initPosZ + 3f);
             piece = Instantiate(yellowPiece, target.position, target.rotation);
-            piece.name = "Piece" + x;
+            piece.name = "YellowPiece";
             pieces.Add(piece);
         }
-        for (int x = 60; x < 80; x++)
+        for (int x = 0; x < 20; x++)
         {
             target.position = new Vector3(initPosX + x * 1.5f, 0.45f, initPosZ + 4.5f);
             piece = Instantiate(redPiece, target.position, target.rotation);
-            piece.name = "Piece" + x;
+            piece.name = "RedPiece";
             pieces.Add(piece);
         }
-        for (int x = 80; x < 100; x++)
+        for (int x = 0; x < 20; x++)
         {
             target.position = new Vector3(initPosX + x * 1.5f, 0.45f, initPosZ + 6f);
             piece = Instantiate(purplePiece, target.position, target.rotation);
-            piece.name = "Piece" + x;
+            piece.name = "PurplePiece";
             pieces.Add(piece);
         }
-        Debug.Log(pieces.Count);
+        //Debug.Log(pieces.Count);
     }
 
 
