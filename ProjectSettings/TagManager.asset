@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Factory
+  - BluePiece
+  - GreenPiece
+  - PurplePiece
+  - RedPiece
+  - YellowPiece
   layers:
   - Default
   - TransparentFX

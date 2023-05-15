@@ -18,14 +18,24 @@ public class ReferenceController : MonoBehaviour
     public GameObject[,] board;
 
 
+
+    public int factorySelected;
+
+
+
+
+
+
     void Start()
     {
-        
+
     }
 
-    
+
     void Update()
     {
-        
+
     }
+
+
 }

@@ -1,18 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class FactoryController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private int myFactoryNumber;
 
-    // Update is called once per frame
+    private bool mouseEnter;
+    private bool iAmSelected;
+
+
     void Update()
     {
-        
+        if (iAmSelected && !mouseEnter && Input.GetMouseButtonDown(0))
+        {
+            iAmSelected = false;
+            gameObject.GetComponent<Outline>().enabled = false;
+        }
+        if (mouseEnter && Input.GetMouseButtonDown(0))
+        {
+            ReferenceController.Instance.factorySelected = myFactoryNumber;
+            iAmSelected = true;
+            PaintSelectFactory();
+        }
     }
+
+    private void PaintSelectFactory()
+    {
+        gameObject.GetComponent<Outline>().enabled = true;
+    }
+
+    private void OnMouseEnter()
+    {
+        mouseEnter = true;
+    }
+
+    private void OnMouseExit()
+    {
+        mouseEnter = false;
+    }
+
+
 }

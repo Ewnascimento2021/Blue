@@ -39,36 +39,36 @@ public class BoardController : MonoBehaviour
         RandomRound();
     }
 
-
-
-    void Update()
-    {
-
-    }
-
     private void RandomRound()
     {
         //Fab - 1
         int pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn1Pos1 = new Vector3(6.6f, 0.6f, -18.80f);
         pieces[pieceRandom].transform.position = spawn1Pos1;
+        pieces[pieceRandom].GetComponent<PiecesController>().myName = "Fab1";
         pieces.RemoveAt(pieceRandom);
-
+       
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn1Pos2 = new Vector3(6.6f, 0.6f, -17.5f);
         pieces[pieceRandom].transform.position = spawn1Pos2;
+        pieces[pieceRandom].GetComponent<PiecesController>().myName = "Fab1";
         pieces.RemoveAt(pieceRandom);
+        
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn1Pos3 = new Vector3(5.4f, 0.6f, -17.5f);
         pieces[pieceRandom].transform.position = spawn1Pos3;
+        pieces[pieceRandom].GetComponent<PiecesController>().myName = "Fab1";
         pieces.RemoveAt(pieceRandom);
+      
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn1Pos4 = new Vector3(5.4f, 0.6f, -18.80f);
         pieces[pieceRandom].transform.position = spawn1Pos4;
+        pieces[pieceRandom].GetComponent<PiecesController>().myName = "Fab1";
         pieces.RemoveAt(pieceRandom);
+       
 
         //Fab - 2
         pieceRandom = Random.Range(0, pieces.Count);
@@ -174,6 +174,7 @@ public class BoardController : MonoBehaviour
             piece = Instantiate(greenPiece, target.position, target.rotation);
             piece.name = "GreenPiece";
             pieces.Add(piece);
+
         }
         for (int x = 0; x < 20; x++)
         {
