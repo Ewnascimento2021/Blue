@@ -18,23 +18,15 @@ public class ReferenceController : MonoBehaviour
     public GameObject[,] board;
 
 
-
+    public bool pieceSelected;
+    public string pieceName;
+    public string factoryName;
     public int factorySelected;
-
-
-
-
-
-
-    void Start()
-    {
-
-    }
 
 
     void Update()
     {
-
+        Debug.Log(pieceName);
     }
 
 

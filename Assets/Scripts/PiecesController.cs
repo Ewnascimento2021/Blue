@@ -7,7 +7,7 @@ public class PiecesController : MonoBehaviour
     private Collider m_Collider;
     private bool mouseEnter;
     private bool iAmSelected;
-    public string myName;
+    public string factoryName;
 
 
     void Start()
@@ -18,26 +18,34 @@ public class PiecesController : MonoBehaviour
 
     void Update()
     {
-        if (ReferenceController.Instance.factorySelected == 1 && myName == "Fab1")
+        if (ReferenceController.Instance.factoryName == factoryName)
         {
             m_Collider.enabled = true;
-        }
-        if (Input.GetMouseButtonDown(0) && m_Collider == true)
-        {
-            if (iAmSelected && !mouseEnter)
+
+            if (Input.GetMouseButtonDown(0))
             {
-                iAmSelected = false;
-                gameObject.GetComponent<Outline>().enabled = false;
-                m_Collider.enabled = false;
+                if (iAmSelected && !mouseEnter)
+                {
+                    ReferenceController.Instance.pieceSelected = false;
+                    gameObject.GetComponent<Outline>().enabled = false;
+                    m_Collider.enabled = false;
+                    iAmSelected = false;
+                }
+                if (mouseEnter)
+                {
+                    PaintSelectFactory();
+                    ReferenceController.Instance.pieceSelected = true;
+                    ReferenceController.Instance.pieceName = gameObject.name;
+                    iAmSelected = true;
+                }
             }
-            if (mouseEnter)
+            if (gameObject.name == ReferenceController.Instance.pieceName && ReferenceController.Instance.pieceSelected)
             {
                 PaintSelectFactory();
                 iAmSelected = true;
+
             }
-        }
-
-
+        }  
     }
 
     private void PaintSelectFactory()

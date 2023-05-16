@@ -7,6 +7,8 @@ public class FactoryController : MonoBehaviour
 {
     [SerializeField]
     private int myFactoryNumber;
+    [SerializeField]
+    private string factoryName;
 
     private bool mouseEnter;
     private bool iAmSelected;
@@ -18,10 +20,13 @@ public class FactoryController : MonoBehaviour
         {
             iAmSelected = false;
             gameObject.GetComponent<Outline>().enabled = false;
+            ReferenceController.Instance.factorySelected = 0;
         }
+
         if (mouseEnter && Input.GetMouseButtonDown(0))
         {
             ReferenceController.Instance.factorySelected = myFactoryNumber;
+            ReferenceController.Instance.factoryName = factoryName;
             iAmSelected = true;
             PaintSelectFactory();
         }

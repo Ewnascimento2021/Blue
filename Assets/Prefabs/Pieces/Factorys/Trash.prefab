@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1687199042692224548}
   - component: {fileID: 2361567368003688833}
   - component: {fileID: 513707550887341387}
-  - component: {fileID: 5039787956125722247}
+  - component: {fileID: 7968073350800270440}
   m_Layer: 0
   m_Name: Trash
   m_TagString: Factory
@@ -82,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5039787956125722247
+--- !u!65 &7968073350800270440
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,5 +93,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.03418866, y: 0.034177333, z: 0.0024463458}
-  m_Center: {x: 0, y: 0.000011336992, z: -0.008776829}
+  m_Size: {x: 0.027332753, y: 0.029655006, z: 0.0024463453}
+  m_Center: {x: -0.00014368533, y: 0.00019119374, z: -0.0087768305}

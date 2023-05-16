@@ -45,28 +45,25 @@ public class BoardController : MonoBehaviour
         int pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn1Pos1 = new Vector3(6.6f, 0.6f, -18.80f);
         pieces[pieceRandom].transform.position = spawn1Pos1;
-        pieces[pieceRandom].GetComponent<PiecesController>().myName = "Fab1";
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab1";
         pieces.RemoveAt(pieceRandom);
-       
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn1Pos2 = new Vector3(6.6f, 0.6f, -17.5f);
         pieces[pieceRandom].transform.position = spawn1Pos2;
-        pieces[pieceRandom].GetComponent<PiecesController>().myName = "Fab1";
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab1";
         pieces.RemoveAt(pieceRandom);
         
-
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn1Pos3 = new Vector3(5.4f, 0.6f, -17.5f);
         pieces[pieceRandom].transform.position = spawn1Pos3;
-        pieces[pieceRandom].GetComponent<PiecesController>().myName = "Fab1";
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab1";
         pieces.RemoveAt(pieceRandom);
       
-
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn1Pos4 = new Vector3(5.4f, 0.6f, -18.80f);
         pieces[pieceRandom].transform.position = spawn1Pos4;
-        pieces[pieceRandom].GetComponent<PiecesController>().myName = "Fab1";
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab1";
         pieces.RemoveAt(pieceRandom);
        
 
@@ -74,87 +71,101 @@ public class BoardController : MonoBehaviour
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn2Pos1 = new Vector3(2.1f, 0.6f, -18.80f);
         pieces[pieceRandom].transform.position = spawn2Pos1;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab2";
         pieces.RemoveAt(pieceRandom);
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn2Pos2 = new Vector3(2.1f, 0.6f, -17.5f);
         pieces[pieceRandom].transform.position = spawn2Pos2;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab2";
         pieces.RemoveAt(pieceRandom);
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn2Pos3 = new Vector3(0.90f, 0.6f, -17.5f);
         pieces[pieceRandom].transform.position = spawn2Pos3;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab2";
         pieces.RemoveAt(pieceRandom);
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn2Pos4 = new Vector3(0.90f, 0.6f, -18.80f);
         pieces[pieceRandom].transform.position = spawn2Pos4;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab2";
         pieces.RemoveAt(pieceRandom);
 
         //Fab - 3
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn3Pos1 = new Vector3(-2.7f, 0.6f, -18.80f);
         pieces[pieceRandom].transform.position = spawn3Pos1;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab3";
         pieces.RemoveAt(pieceRandom);
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn3Pos2 = new Vector3(-2.7f, 0.6f, -17.5f);
         pieces[pieceRandom].transform.position = spawn3Pos2;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab3";
         pieces.RemoveAt(pieceRandom);
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn3Pos3 = new Vector3(-3.8f, 0.6f, -17.5f);
         pieces[pieceRandom].transform.position = spawn3Pos3;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab3";
         pieces.RemoveAt(pieceRandom);
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn3Pos4 = new Vector3(-3.8f, 0.6f, -18.80f);
         pieces[pieceRandom].transform.position = spawn3Pos4;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab3";
         pieces.RemoveAt(pieceRandom);
 
         //Fab - 4
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn4Pos1 = new Vector3(-7.0f, 0.6f, -18.80f);
         pieces[pieceRandom].transform.position = spawn4Pos1;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab4";
         pieces.RemoveAt(pieceRandom);
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn4Pos2 = new Vector3(-7.0f, 0.6f, -17.5f);
         pieces[pieceRandom].transform.position = spawn4Pos2;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab4";
         pieces.RemoveAt(pieceRandom);
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn4Pos3 = new Vector3(-8.3f, 0.6f, -17.5f);
         pieces[pieceRandom].transform.position = spawn4Pos3;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab4";
         pieces.RemoveAt(pieceRandom);
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn4Pos4 = new Vector3(-8.3f, 0.6f, -18.80f);
         pieces[pieceRandom].transform.position = spawn4Pos4;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab4";
         pieces.RemoveAt(pieceRandom);
 
         //Fab - 5
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn5Pos1 = new Vector3(-11.7f, 0.6f, -18.80f);
         pieces[pieceRandom].transform.position = spawn5Pos1;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab5";
         pieces.RemoveAt(pieceRandom);
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn5Pos2 = new Vector3(-11.7f, 0.6f, -17.5f);
         pieces[pieceRandom].transform.position = spawn5Pos2;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab5";
         pieces.RemoveAt(pieceRandom);
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn5Pos3 = new Vector3(-12.9f, 0.6f, -17.5f);
         pieces[pieceRandom].transform.position = spawn5Pos3;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab5";
         pieces.RemoveAt(pieceRandom);
 
         pieceRandom = Random.Range(0, pieces.Count);
         Vector3 spawn5Pos4 = new Vector3(-12.9f, 0.6f, -18.80f);
         pieces[pieceRandom].transform.position = spawn5Pos4;
+        pieces[pieceRandom].GetComponent<PiecesController>().factoryName = "Fab5";
         pieces.RemoveAt(pieceRandom);
-
-        //Debug.Log(pieces.Count);
     }
 
     private void CreatePiece()
@@ -199,6 +210,4 @@ public class BoardController : MonoBehaviour
         }
         //Debug.Log(pieces.Count);
     }
-
-
 }
