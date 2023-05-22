@@ -6,46 +6,20 @@ using UnityEngine;
 public class FactoryController : MonoBehaviour
 {
     [SerializeField]
-    private int myFactoryNumber;
-    [SerializeField]
     private string factoryName;
-
-    private bool mouseEnter;
     private bool iAmSelected;
-
 
     void Update()
     {
-        if (iAmSelected && !mouseEnter && Input.GetMouseButtonDown(0))
-        {
-            iAmSelected = false;
-            gameObject.GetComponent<Outline>().enabled = false;
-            ReferenceController.Instance.factorySelected = 0;
-        }
-
-        if (mouseEnter && Input.GetMouseButtonDown(0))
-        {
-            ReferenceController.Instance.factorySelected = myFactoryNumber;
-            ReferenceController.Instance.factoryName = factoryName;
-            iAmSelected = true;
-            PaintSelectFactory();
-        }
+        //if (ReferenceController.Instance.factoryName == factoryName)
+        //{
+        //    Debug.Log(ReferenceController.Instance.factoryName);
+        //    iAmSelected = true;
+        //}
+        //else if (iAmSelected)
+        //{
+        //    Debug.Log(ReferenceController.Instance.factoryName);
+        //    iAmSelected = false;
+        //}
     }
-
-    private void PaintSelectFactory()
-    {
-        gameObject.GetComponent<Outline>().enabled = true;
-    }
-
-    private void OnMouseEnter()
-    {
-        mouseEnter = true;
-    }
-
-    private void OnMouseExit()
-    {
-        mouseEnter = false;
-    }
-
-
 }
