@@ -2,30 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnterPiece : MonoBehaviour
+public class PlaneCancel : MonoBehaviour
 {
-    [SerializeField]
-    private int numberLine;
-
     private bool mouseEnter;
-
-    
-
-
-    void Start()
-    {
-        
-    }
-
- 
     void Update()
     {
-        if (ReferenceController.Instance.isPieceSelected)
+        if (mouseEnter && Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButtonDown(0) && mouseEnter)
-            {
-
-            }
+            ReferenceController.Instance.CancelSelected = true;
         }
     }
 

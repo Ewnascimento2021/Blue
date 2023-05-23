@@ -17,7 +17,7 @@ public class PiecesController : MonoBehaviour
 
     void Update()
     {
-        if (mouseEnter && !iAmSelected)
+        if (mouseEnter && !iAmSelected && !ReferenceController.Instance.isPieceSelected)
         {
             ReferenceController.Instance.factoryName = factoryName;
         }
@@ -31,12 +31,14 @@ public class PiecesController : MonoBehaviour
                 {
                     iAmSelected = true;
                     ReferenceController.Instance.isPieceSelected = true;
+                    //////
+                    Debug.Log(ReferenceController.Instance.isPieceSelected);
                 }
             }
             else if (gameObject.name == ReferenceController.Instance.pieceName)
             {
                 gameObject.GetComponent<Outline>().enabled = true;
-                
+
                 if (ReferenceController.Instance.isPieceSelected == true)
                 {
                     iAmSelected = true;
@@ -45,38 +47,22 @@ public class PiecesController : MonoBehaviour
             else if (gameObject.name != ReferenceController.Instance.pieceName)
             {
                 gameObject.GetComponent<Outline>().enabled = false;
+                iAmSelected = false;
+
+            }
+            if (ReferenceController.Instance.CancelSelected)
+            {
+                ReferenceController.Instance.isPieceSelected = false;
+                gameObject.GetComponent<Outline>().enabled = false;
+                iAmSelected = false;
+                ReferenceController.Instance.CancelSelected = false;
             }
         }
         else if (ReferenceController.Instance.factoryName != factoryName)
         {
             gameObject.GetComponent<Outline>().enabled = false;
-
         }
 
-
-
-        //if (Input.GetMouseButtonDown(0) && !mouseEnter)
-        //{
-        //    m_Collider.enabled = false;
-        //    gameObject.GetComponent<Outline>().enabled = false;
-        //    ReferenceController.Instance.pieceSelected = false;
-        //    ReferenceController.Instance.pieceName = null;
-        //    pieceSelect = false;
-        //}
-
-        //if (Input.GetMouseButtonDown(0)  && mouseEnter)
-        //{   
-        //    gameObject.GetComponent<Outline>().enabled = true;
-        //    ReferenceController.Instance.pieceSelected = true;
-        //    ReferenceController.Instance.pieceName = gameObject.name;
-        //    pieceSelect = true;
-        //}
-
-        //if (gameObject.name == ReferenceController.Instance.pieceName && ReferenceController.Instance.pieceSelected)
-        //{
-        //    gameObject.GetComponent<Outline>().enabled = true;
-        //    pieceSelect = true;
-        //}
     }
 
 

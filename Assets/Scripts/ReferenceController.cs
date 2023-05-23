@@ -25,4 +25,13 @@ public class ReferenceController : MonoBehaviour
 
     public string factoryName;
 
+    public bool CancelSelected;
+
+    public Transform corcoordinatesHouse;
+    private void HouseSelected()
+    {
+
+
+    }
+
 }
