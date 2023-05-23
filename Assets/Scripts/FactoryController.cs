@@ -7,7 +7,6 @@ public class FactoryController : MonoBehaviour
 {
     [SerializeField]
     private string factoryName;
-    private bool iAmSelected;
 
     void Update()
     {
