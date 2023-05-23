@@ -15,8 +15,6 @@ public class ReferenceController : MonoBehaviour
         }
     }
 
-    public GameObject[,] board;
-
     public bool isPieceSelected;
 
     public string pieceName;

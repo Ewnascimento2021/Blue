@@ -29,6 +29,8 @@ public class EnterPiece : MonoBehaviour
         }
     }
 
+ 
+
     private void OnMouseEnter()
     {
         mouseEnter = true;

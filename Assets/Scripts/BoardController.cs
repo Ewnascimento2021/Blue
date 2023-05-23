@@ -25,8 +25,6 @@ public class BoardController : MonoBehaviour
     private List<GameObject> pieces = new List<GameObject>();
     private List<GameObject> trash = new List<GameObject>();
 
-    private GameObject[,] board;
-
     private float initPosX = 1.0f;
     private float initPosZ = 1.0f;
     //private int rodada;
@@ -34,7 +32,6 @@ public class BoardController : MonoBehaviour
 
     void Start()
     {
-        board = new GameObject[10, 10];
         CreatePiece();
         RandomRound();
     }
