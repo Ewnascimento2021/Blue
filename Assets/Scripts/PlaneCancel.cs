@@ -9,7 +9,7 @@ public class PlaneCancel : MonoBehaviour
     {
         if (mouseEnter && Input.GetMouseButtonDown(0))
         {
-            ReferenceController.Instance.CancelSelected = true;
+            ReferenceController.Instance.cancelSelected = true;
         }
     }
 

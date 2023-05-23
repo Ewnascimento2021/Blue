@@ -9,6 +9,9 @@ public class EnterPiece : MonoBehaviour
 
     private bool mouseEnter;
 
+    private bool houseSelected;
+
+    private bool nullPiece;
     
 
 
@@ -22,10 +25,25 @@ public class EnterPiece : MonoBehaviour
     {
         if (ReferenceController.Instance.isPieceSelected)
         {
-            if (Input.GetMouseButtonDown(0) && mouseEnter)
+            if (mouseEnter)
             {
+                gameObject.GetComponent<Outline>().enabled = true;
 
+                if (Input.GetMouseButtonDown(0))
+                {
+                    ReferenceController.Instance.lineSelected = numberLine;
+
+                    houseSelected = true;
+
+                    ReferenceController.Instance.HoldPieces();
+                }
             }
+            else if (!mouseEnter) 
+            {
+                gameObject.GetComponent<Outline>().enabled = false;
+            }
+
+
         }
     }
 

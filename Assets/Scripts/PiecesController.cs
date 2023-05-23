@@ -33,7 +33,7 @@ public class PiecesController : MonoBehaviour
                     ReferenceController.Instance.isPieceSelected = true;
                     AddPieceList();
                    // ReferenceController.Instance.contPiecesSelected.Add(gameObject);
-                   Debug.Log(ReferenceController.Instance.contPiecesSelected.Count);
+                   
                 }
             }
             else if (gameObject.name == ReferenceController.Instance.pieceName)
@@ -45,7 +45,7 @@ public class PiecesController : MonoBehaviour
                     iAmSelected = true;
                     AddPieceList();
                   //  ReferenceController.Instance.contPiecesSelected.Add(gameObject);
-                  Debug.Log(ReferenceController.Instance.contPiecesSelected.Count);
+                  
                 }
             }
             else if (gameObject.name != ReferenceController.Instance.pieceName)
@@ -54,12 +54,12 @@ public class PiecesController : MonoBehaviour
                 iAmSelected = false;
                 
             }
-            if (ReferenceController.Instance.CancelSelected)
+            if (ReferenceController.Instance.cancelSelected)
             {
                 ReferenceController.Instance.isPieceSelected = false;
                 gameObject.GetComponent<Outline>().enabled = false;
                 iAmSelected = false;
-                ReferenceController.Instance.CancelSelected = false;
+                ReferenceController.Instance.cancelSelected = false;
                 ReferenceController.Instance.contPiecesSelected.Clear();
                 Debug.Log(ReferenceController.Instance.contPiecesSelected.Count);
             }
