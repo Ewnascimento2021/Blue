@@ -15,6 +15,9 @@ public class ReferenceController : MonoBehaviour
         }
     }
 
+
+    public List<GameObject> contPiecesSelected = new List<GameObject>();
+
     public bool isPieceSelected;
 
     public string pieceName;
@@ -26,6 +29,9 @@ public class ReferenceController : MonoBehaviour
     public bool CancelSelected;
 
     public Transform corcoordinatesHouse;
+
+    
+
     private void HouseSelected()
     {
 

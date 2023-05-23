@@ -31,8 +31,9 @@ public class PiecesController : MonoBehaviour
                 {
                     iAmSelected = true;
                     ReferenceController.Instance.isPieceSelected = true;
-                    //////
-                    Debug.Log(ReferenceController.Instance.isPieceSelected);
+                    AddPieceList();
+                   // ReferenceController.Instance.contPiecesSelected.Add(gameObject);
+                   Debug.Log(ReferenceController.Instance.contPiecesSelected.Count);
                 }
             }
             else if (gameObject.name == ReferenceController.Instance.pieceName)
@@ -42,13 +43,16 @@ public class PiecesController : MonoBehaviour
                 if (ReferenceController.Instance.isPieceSelected == true)
                 {
                     iAmSelected = true;
+                    AddPieceList();
+                  //  ReferenceController.Instance.contPiecesSelected.Add(gameObject);
+                  Debug.Log(ReferenceController.Instance.contPiecesSelected.Count);
                 }
             }
             else if (gameObject.name != ReferenceController.Instance.pieceName)
             {
                 gameObject.GetComponent<Outline>().enabled = false;
                 iAmSelected = false;
-
+                
             }
             if (ReferenceController.Instance.CancelSelected)
             {
@@ -56,6 +60,8 @@ public class PiecesController : MonoBehaviour
                 gameObject.GetComponent<Outline>().enabled = false;
                 iAmSelected = false;
                 ReferenceController.Instance.CancelSelected = false;
+                ReferenceController.Instance.contPiecesSelected.Clear();
+                Debug.Log(ReferenceController.Instance.contPiecesSelected.Count);
             }
         }
         else if (ReferenceController.Instance.factoryName != factoryName)
@@ -63,6 +69,14 @@ public class PiecesController : MonoBehaviour
             gameObject.GetComponent<Outline>().enabled = false;
         }
 
+    }
+
+    private void AddPieceList()
+    {
+        if (!ReferenceController.Instance.contPiecesSelected.Contains(gameObject))
+        {
+            ReferenceController.Instance.contPiecesSelected.Add(gameObject);
+        }
     }
 
 
