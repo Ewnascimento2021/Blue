@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using static UnityEditor.PlayerSettings;
 
@@ -19,6 +20,14 @@ public class ReferenceController : MonoBehaviour
 
     public List<GameObject> contPiecesSelected = new List<GameObject>();
 
+
+    public List<GameObject> houseLine1 = new List<GameObject>();
+    public List<GameObject> houseLine2 = new List<GameObject>();
+    public List<GameObject> houseLine3 = new List<GameObject>();
+    public List<GameObject> houseLine4 = new List<GameObject>();
+    public List<GameObject> houseLine5 = new List<GameObject>();
+    public List<GameObject> descart = new List<GameObject>();
+
     public Vector3[,] corcoordinatesHouse;
 
 
@@ -36,6 +45,8 @@ public class ReferenceController : MonoBehaviour
 
     public bool otherPlayer;
 
+    public bool clearPlay;
+
 
     private void Start()
     {
@@ -48,11 +59,23 @@ public class ReferenceController : MonoBehaviour
         {
             case 1:
 
-                if (contPiecesSelected.Count == 1)
+                if (houseLine1.Count >= 1)
+                {
+                    TrashPiece();
+                }
+                if (contPiecesSelected.Count == 1 && houseLine1.Count < 1)
                 {
                     Vector3 spawn1Pos1 = new Vector3(5.15f, 0.67f, -14.90f);
                     contPiecesSelected[0].transform.position = spawn1Pos1;
                     contPiecesSelected.RemoveAt(0);
+                }
+                else if (contPiecesSelected.Count > 1 && houseLine1.Count == 0)
+                {
+                    Vector3 spawn1Pos1 = new Vector3(5.15f, 0.67f, -14.90f);
+                    contPiecesSelected[0].transform.position = spawn1Pos1;
+                    contPiecesSelected.RemoveAt(0);
+
+                    TrashPiece();
                 }
                 break;
 
@@ -109,8 +132,43 @@ public class ReferenceController : MonoBehaviour
                 }
                 break;
 
+            case 5:
+                if (contPiecesSelected.Count == 5)
+                {
+                    Vector3 spawn5Pos1 = new Vector3(5.15f, 0.67f, -9.90f);
+                    contPiecesSelected[0].transform.position = spawn5Pos1;
+                    contPiecesSelected.RemoveAt(0);
+
+                    Vector3 spawn5Pos2 = new Vector3(6.41f, 0.67f, -9.90f);
+                    contPiecesSelected[0].transform.position = spawn5Pos2;
+                    contPiecesSelected.RemoveAt(0);
+
+                    Vector3 spawn5Pos3 = new Vector3(7.68f, 0.67f, -9.90f);
+                    contPiecesSelected[0].transform.position = spawn5Pos3;
+                    contPiecesSelected.RemoveAt(0);
+
+                    Vector3 spawn5Pos4 = new Vector3(8.9f, 0.67f, -9.90f);
+                    contPiecesSelected[0].transform.position = spawn5Pos4;
+                    contPiecesSelected.RemoveAt(0);
+
+                    Vector3 spawn5Pos5 = new Vector3(10.16f, 0.67f, -9.90f);
+                    contPiecesSelected[0].transform.position = spawn5Pos5;
+                    contPiecesSelected.RemoveAt(0);
+                }
+                break;
         }
 
+
+    }
+
+    private void TrashPiece()
+    {
+        if (contPiecesSelected.Count > 0)
+        {
+            Vector3 spawnTrashPos1 = new Vector3(10.13f, 0.67f, -8.74f);
+            contPiecesSelected[0].transform.position = spawnTrashPos1;
+            contPiecesSelected.RemoveAt(0);
+        }
     }
 
 }

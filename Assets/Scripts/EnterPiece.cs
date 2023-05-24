@@ -15,11 +15,6 @@ public class EnterPiece : MonoBehaviour
     
 
 
-    void Start()
-    {
-        
-    }
-
  
     void Update()
     {
@@ -36,15 +31,21 @@ public class EnterPiece : MonoBehaviour
                     houseSelected = true;
 
                     ReferenceController.Instance.HoldPieces();
+
+                    ReferenceController.Instance.clearPlay = true;
+                    
                 }
             }
             else if (!mouseEnter) 
             {
                 gameObject.GetComponent<Outline>().enabled = false;
             }
-
-
         }
+    }
+
+    private void ControllerOpenHouse()
+    {
+
     }
 
  

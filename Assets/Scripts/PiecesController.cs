@@ -61,7 +61,16 @@ public class PiecesController : MonoBehaviour
                 iAmSelected = false;
                 ReferenceController.Instance.cancelSelected = false;
                 ReferenceController.Instance.contPiecesSelected.Clear();
-                Debug.Log(ReferenceController.Instance.contPiecesSelected.Count);
+            }
+
+            if (ReferenceController.Instance.clearPlay)
+            {
+                ReferenceController.Instance.isPieceSelected = false;
+                gameObject.GetComponent<Outline>().enabled = false;
+                iAmSelected = false;
+                ReferenceController.Instance.cancelSelected = false;
+                ReferenceController.Instance.contPiecesSelected.Clear();
+                ReferenceController.Instance.clearPlay = false;
             }
         }
         else if (ReferenceController.Instance.factoryName != factoryName)
