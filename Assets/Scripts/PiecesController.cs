@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PiecesController : MonoBehaviour
 {
-    private Collider m_Collider;
+    //private Collider m_Collider;
     private bool mouseEnter;
     public string factoryName;
     private bool iAmSelected;
