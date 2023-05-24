@@ -130,69 +130,113 @@ public class ReferenceController : MonoBehaviour
                 }
                 break;
 
-
-            //    if (contPiecesSelected.Count == 3)
-            //{
-            //    Vector3 spawn3Pos1 = new Vector3(5.15f, 0.67f, -12.44f);
-            //    contPiecesSelected[0].transform.position = spawn3Pos1;
-            //    contPiecesSelected.RemoveAt(0);
-
-            //    Vector3 spawn3Pos2 = new Vector3(6.41f, 0.67f, -12.44f);
-            //    contPiecesSelected[0].transform.position = spawn3Pos2;
-            //    contPiecesSelected.RemoveAt(0);
-
-            //    Vector3 spawn3Pos3 = new Vector3(7.68f, 0.67f, -12.44f);
-            //    contPiecesSelected[0].transform.position = spawn3Pos3;
-            //    contPiecesSelected.RemoveAt(0);
-
-            //}
-            //break;
-
         case 4:
-            if (contPiecesSelected.Count == 4)
-            {
-                Vector3 spawn4Pos1 = new Vector3(5.15f, 0.67f, -11.2f);
-                contPiecesSelected[0].transform.position = spawn4Pos1;
-                contPiecesSelected.RemoveAt(0);
-
-                Vector3 spawn4Pos2 = new Vector3(6.41f, 0.67f, -11.2f);
-                contPiecesSelected[0].transform.position = spawn4Pos2;
-                contPiecesSelected.RemoveAt(0);
-
-                Vector3 spawn4Pos3 = new Vector3(7.68f, 0.67f, -11.2f);
-                contPiecesSelected[0].transform.position = spawn4Pos3;
-                contPiecesSelected.RemoveAt(0);
-
-                Vector3 spawn4Pos4 = new Vector3(8.9f, 0.67f, -11.2f);
-                contPiecesSelected[0].transform.position = spawn4Pos4;
-                contPiecesSelected.RemoveAt(0);
-            }
-            break;
+                if (contPiecesSelected.Count >= 1 && houseLine4.Count == 0)
+                {
+                    Vector3 spawn4Pos1 = new Vector3(5.15f, 0.67f, -11.2f);
+                    contPiecesSelected[0].transform.position = spawn4Pos1;
+                    houseLine4.Add(contPiecesSelected[0]);
+                    contPiecesSelected.RemoveAt(0);
+                }
+                if (contPiecesSelected.Count >= 1 && houseLine4.Count == 1 && contPiecesSelected[0].name == houseLine4[0].name)
+                {
+                    Vector3 spawn4Pos2 = new Vector3(6.41f, 0.67f, -11.2f);
+                    contPiecesSelected[0].transform.position = spawn4Pos2;
+                    houseLine4.Add(contPiecesSelected[0]);
+                    contPiecesSelected.RemoveAt(0);
+                }
+                if (contPiecesSelected.Count >= 1 && houseLine4.Count == 2 && contPiecesSelected[0].name == houseLine4[0].name)
+                {
+                    Vector3 spawn4Pos3 = new Vector3(7.68f, 0.67f, -11.2f);
+                    contPiecesSelected[0].transform.position = spawn4Pos3;
+                    houseLine4.Add(contPiecesSelected[0]);
+                    contPiecesSelected.RemoveAt(0);
+                }
+                if (contPiecesSelected.Count >= 1 && houseLine4.Count == 3 && contPiecesSelected[0].name == houseLine4[0].name)
+                {
+                    Vector3 spawn4Pos4 = new Vector3(8.9f, 0.67f, -11.2f);
+                    contPiecesSelected[0].transform.position = spawn4Pos4;
+                    houseLine4.Add(contPiecesSelected[0]);
+                    contPiecesSelected.RemoveAt(0);
+                }
+                else
+                {
+                    clearPlay = true;
+                }
+                if (contPiecesSelected.Count >= 1 && houseLine4.Count == 4)
+                {
+                    TrashPiece();
+                }
+                break;
 
         case 5:
-            if (contPiecesSelected.Count == 5)
-            {
-                Vector3 spawn5Pos1 = new Vector3(5.15f, 0.67f, -9.90f);
-                contPiecesSelected[0].transform.position = spawn5Pos1;
-                contPiecesSelected.RemoveAt(0);
+                if (contPiecesSelected.Count >= 1 && houseLine5.Count == 0)
+                {
+                    Vector3 spawn5Pos1 = new Vector3(5.15f, 0.67f, -9.90f);
+                    contPiecesSelected[0].transform.position = spawn5Pos1;
+                    houseLine5.Add(contPiecesSelected[0]);
+                    contPiecesSelected.RemoveAt(0);
+                }
+                if (contPiecesSelected.Count >= 1 && houseLine5.Count == 1 && contPiecesSelected[0].name == houseLine5[0].name)
+                {
+                    Vector3 spawn5Pos2 = new Vector3(6.41f, 0.67f, -9.90f);
+                    contPiecesSelected[0].transform.position = spawn5Pos2;
+                    houseLine5.Add(contPiecesSelected[0]);
+                    contPiecesSelected.RemoveAt(0);
+                }
+                if (contPiecesSelected.Count >= 1 && houseLine5.Count == 2 && contPiecesSelected[0].name == houseLine5[0].name)
+                {
+                    Vector3 spawn5Pos3 = new Vector3(7.68f, 0.67f, -9.90f);
+                    contPiecesSelected[0].transform.position = spawn5Pos3;
+                    houseLine5.Add(contPiecesSelected[0]);
+                    contPiecesSelected.RemoveAt(0);
+                }
+                if (contPiecesSelected.Count >= 1 && houseLine5.Count == 3 && contPiecesSelected[0].name == houseLine5[0].name)
+                {
+                    Vector3 spawn5Pos4 = new Vector3(8.9f, 0.67f, -9.90f);
+                    contPiecesSelected[0].transform.position = spawn5Pos4;
+                    houseLine5.Add(contPiecesSelected[0]);
+                    contPiecesSelected.RemoveAt(0);
+                }
+                if (contPiecesSelected.Count >= 1 && houseLine5.Count == 4 && contPiecesSelected[0].name == houseLine5[0].name)
+                {
+                    Vector3 spawn5Pos5 = new Vector3(10.16f, 0.67f, -9.90f);
+                    contPiecesSelected[0].transform.position = spawn5Pos5;
+                    houseLine5.Add(contPiecesSelected[0]);
+                    contPiecesSelected.RemoveAt(0);
+                }
+                else
+                {
+                    clearPlay = true;
+                }
+                if (contPiecesSelected.Count >= 1 && houseLine5.Count == 5)
+                {
+                    TrashPiece();
+                }
+                break;
+            //    if (contPiecesSelected.Count == 5)
+            //{
+            //    //Vector3 spawn5Pos1 = new Vector3(5.15f, 0.67f, -9.90f);
+            //    //contPiecesSelected[0].transform.position = spawn5Pos1;
+            //    //contPiecesSelected.RemoveAt(0);
 
-                Vector3 spawn5Pos2 = new Vector3(6.41f, 0.67f, -9.90f);
-                contPiecesSelected[0].transform.position = spawn5Pos2;
-                contPiecesSelected.RemoveAt(0);
+            //    //Vector3 spawn5Pos2 = new Vector3(6.41f, 0.67f, -9.90f);
+            //    //contPiecesSelected[0].transform.position = spawn5Pos2;
+            //    //contPiecesSelected.RemoveAt(0);
 
-                Vector3 spawn5Pos3 = new Vector3(7.68f, 0.67f, -9.90f);
-                contPiecesSelected[0].transform.position = spawn5Pos3;
-                contPiecesSelected.RemoveAt(0);
+            //    //Vector3 spawn5Pos3 = new Vector3(7.68f, 0.67f, -9.90f);
+            //    //contPiecesSelected[0].transform.position = spawn5Pos3;
+            //    //contPiecesSelected.RemoveAt(0);
 
-                Vector3 spawn5Pos4 = new Vector3(8.9f, 0.67f, -9.90f);
-                contPiecesSelected[0].transform.position = spawn5Pos4;
-                contPiecesSelected.RemoveAt(0);
+            //    Vector3 spawn5Pos4 = new Vector3(8.9f, 0.67f, -9.90f);
+            //    contPiecesSelected[0].transform.position = spawn5Pos4;
+            //    contPiecesSelected.RemoveAt(0);
 
-                Vector3 spawn5Pos5 = new Vector3(10.16f, 0.67f, -9.90f);
-                contPiecesSelected[0].transform.position = spawn5Pos5;
-                contPiecesSelected.RemoveAt(0);
-            }
-            break;
+            //    Vector3 spawn5Pos5 = new Vector3(10.16f, 0.67f, -9.90f);
+            //    contPiecesSelected[0].transform.position = spawn5Pos5;
+            //    contPiecesSelected.RemoveAt(0);
+            //}
+            //break;
         }
 
 
