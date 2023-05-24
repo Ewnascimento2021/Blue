@@ -19,8 +19,6 @@ public class ReferenceController : MonoBehaviour
 
 
     public List<GameObject> contPiecesSelected = new List<GameObject>();
-
-
     public List<GameObject> houseLine1 = new List<GameObject>();
     public List<GameObject> houseLine2 = new List<GameObject>();
     public List<GameObject> houseLine3 = new List<GameObject>();
@@ -28,8 +26,9 @@ public class ReferenceController : MonoBehaviour
     public List<GameObject> houseLine5 = new List<GameObject>();
     public List<GameObject> descart = new List<GameObject>();
 
-    public Vector3[,] corcoordinatesHouse;
+    private Collider m_Collider;
 
+    public Vector3[,] corcoordinatesHouse;
 
     public bool isPieceSelected;
 
@@ -62,6 +61,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn1Pos1 = new Vector3(5.15f, 0.67f, -14.90f);
                     contPiecesSelected[0].transform.position = spawn1Pos1;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine1.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -77,6 +77,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn2Pos1 = new Vector3(5.15f, 0.67f, -13.65f);
                     contPiecesSelected[0].transform.position = spawn2Pos1;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine2.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -84,6 +85,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn2Pos2 = new Vector3(6.41f, 0.67f, -13.65f);
                     contPiecesSelected[0].transform.position = spawn2Pos2;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine2.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -103,6 +105,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn3Pos1 = new Vector3(5.15f, 0.67f, -12.44f);
                     contPiecesSelected[0].transform.position = spawn3Pos1;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine3.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -110,6 +113,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn3Pos2 = new Vector3(6.41f, 0.67f, -12.44f);
                     contPiecesSelected[0].transform.position = spawn3Pos2;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine3.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -117,6 +121,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn3Pos3 = new Vector3(7.68f, 0.67f, -12.44f);
                     contPiecesSelected[0].transform.position = spawn3Pos3;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine3.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -135,6 +140,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn4Pos1 = new Vector3(5.15f, 0.67f, -11.2f);
                     contPiecesSelected[0].transform.position = spawn4Pos1;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine4.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -142,6 +148,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn4Pos2 = new Vector3(6.41f, 0.67f, -11.2f);
                     contPiecesSelected[0].transform.position = spawn4Pos2;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine4.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -149,6 +156,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn4Pos3 = new Vector3(7.68f, 0.67f, -11.2f);
                     contPiecesSelected[0].transform.position = spawn4Pos3;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine4.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -156,6 +164,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn4Pos4 = new Vector3(8.9f, 0.67f, -11.2f);
                     contPiecesSelected[0].transform.position = spawn4Pos4;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine4.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -174,6 +183,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn5Pos1 = new Vector3(5.15f, 0.67f, -9.90f);
                     contPiecesSelected[0].transform.position = spawn5Pos1;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine5.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -181,6 +191,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn5Pos2 = new Vector3(6.41f, 0.67f, -9.90f);
                     contPiecesSelected[0].transform.position = spawn5Pos2;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine5.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -188,6 +199,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn5Pos3 = new Vector3(7.68f, 0.67f, -9.90f);
                     contPiecesSelected[0].transform.position = spawn5Pos3;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine5.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -195,6 +207,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn5Pos4 = new Vector3(8.9f, 0.67f, -9.90f);
                     contPiecesSelected[0].transform.position = spawn5Pos4;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine5.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -202,6 +215,7 @@ public class ReferenceController : MonoBehaviour
                 {
                     Vector3 spawn5Pos5 = new Vector3(10.16f, 0.67f, -9.90f);
                     contPiecesSelected[0].transform.position = spawn5Pos5;
+                    contPiecesSelected[0].GetComponent<Collider>().enabled = false;
                     houseLine5.Add(contPiecesSelected[0]);
                     contPiecesSelected.RemoveAt(0);
                 }
@@ -214,32 +228,7 @@ public class ReferenceController : MonoBehaviour
                     TrashPiece();
                 }
                 break;
-            //    if (contPiecesSelected.Count == 5)
-            //{
-            //    //Vector3 spawn5Pos1 = new Vector3(5.15f, 0.67f, -9.90f);
-            //    //contPiecesSelected[0].transform.position = spawn5Pos1;
-            //    //contPiecesSelected.RemoveAt(0);
-
-            //    //Vector3 spawn5Pos2 = new Vector3(6.41f, 0.67f, -9.90f);
-            //    //contPiecesSelected[0].transform.position = spawn5Pos2;
-            //    //contPiecesSelected.RemoveAt(0);
-
-            //    //Vector3 spawn5Pos3 = new Vector3(7.68f, 0.67f, -9.90f);
-            //    //contPiecesSelected[0].transform.position = spawn5Pos3;
-            //    //contPiecesSelected.RemoveAt(0);
-
-            //    Vector3 spawn5Pos4 = new Vector3(8.9f, 0.67f, -9.90f);
-            //    contPiecesSelected[0].transform.position = spawn5Pos4;
-            //    contPiecesSelected.RemoveAt(0);
-
-            //    Vector3 spawn5Pos5 = new Vector3(10.16f, 0.67f, -9.90f);
-            //    contPiecesSelected[0].transform.position = spawn5Pos5;
-            //    contPiecesSelected.RemoveAt(0);
-            //}
-            //break;
         }
-
-
     }
 
     private void TrashPiece()
